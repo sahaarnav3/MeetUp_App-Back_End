@@ -1,4 +1,4 @@
-const mongoose = requrie("mongoose");
+const mongoose = require("mongoose");
 
 const speakerSchema = new mongoose.Schema({
   name: {
@@ -44,7 +44,10 @@ const eventSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  price: Number,
+  price: {
+    type: String,
+    required: true,
+  },
   tags: {
     type: [String],
     required: true,
