@@ -5,6 +5,10 @@ const speakerSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  designation: {
+    type: String,
+    required: true
+  },
   imageUrl: {
     type: String,
     required: true,
@@ -15,6 +19,11 @@ const eventSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
+  },
+  mode: {
+    type: String,
+    enum: ["Online", "Offline"],
+    required: true
   },
   imageLink: {
     type: String,
